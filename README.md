@@ -1,50 +1,21 @@
-# MemorialDay
+# Typecho-Plugin-MemorialDay
 
-WordPress &amp; Typecho插件：「特殊节日使用」在国家公祭日、全国哀悼日时网站增加灰色滤镜。
+<a href="https://github.com/lei2rock/Typecho-Plugin-MemorialDay"><img src="https://img.shields.io/badge/MemorialDay-v1.1.0-black?&style=flat-square"></a>
+<a href="https://typecho.org/"><img src="https://img.shields.io/badge/Typecho->=1.2-0e83cd?&style=flat-square"></a>
 
-## WordPress
+Typecho 插件：哀悼日开启全站黑白滤镜，修改自 [sy-records/MemorialDay](https://github.com/sy-records/MemorialDay)。
 
-### 安装
+## 安装
 
-#### 后台安装(推荐使用)
+1. 下载源码并上传到 Typecho 插件目录 `usr/plugins` 下
+2. 修改插件文件夹名为 `MemorialDay`
+3. 在 Typecho 后台插件管理中启用插件
 
-WordPress 后台安装插件页面搜索：`MemorialDay`，安装由`沈唁`提供的插件即可。
+## 设置
 
-<a href="https://wordpress.org/plugins/memorialday"><img src="https://cdn.jsdelivr.net/gh/sy-records/MemorialDay/wordpress-MemorialDay.png"></a>
+- 日期格式为：`0512,0918,1213`，可自行添加需要的日期。
+- 如果添加了 `body` 元素的背景图片，单纯的 CSS 设置可能不能让背景图片显示黑白，因此提供了替换原来背景图片的功能，只需要填写黑白的背景图片链接即可直接替换。
 
-#### 源码安装
+## 截图
 
-从 Github 下载源码，通过 WordPress 后台上传安装，或者直接将源码上传到 WordPress 插件目录`wp-content/plugins`，然后在后台启用
-
-### 设置
-
-默认日期为：`0404,0512,0918,1213`，可自行添加需要的日期
-
-## Typecho
-
-### 安装
-
-1. 从 Github载源码，将源码上传到 Typecho 插件目录 `usr/plugins` 下
-
-2. 修改插件文件名为`MemorialDay`
-
-3. 修改目录权限和用户组
-
-```bash
-chown -R www:www MemorialDay/
-chmod 755 MemorialDay/
-```
-
-4. 启用~
-
-### 设置
-
-默认日期为：`0404,0512,0918,1213`，可自行添加需要的日期
-
-## 其他系统站点
-
-其他系统站点可以直接添加代码给`header`中添加`css`样式
-
-```css
-html{filter: grayscale(100%); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); filter: url("data:image/svg+xml;utf8,#grayscale"); filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); -webkit-filter: grayscale(1);}
-```
+![](https://raw.githubusercontent.com/lei2rock/Typecho-Plugin-MemorialDay/master/screenshot.jpg)
